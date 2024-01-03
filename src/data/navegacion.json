@@ -1,0 +1,23 @@
+[
+
+	{
+		"id": "1",
+		"label": "Note",
+		"link": "/"
+	},
+	{
+		"id": "2",
+		"label": "Book",
+		"link": "/Book"
+	},
+	{
+		"id": "3",
+		"label": "Reminder",
+		"link": "/Reminder"
+	},
+	{
+		"id": "4",
+		"label": "Other",
+		"link": "/Other"
+	}
+]

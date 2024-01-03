@@ -1,0 +1,17 @@
+[
+	{
+		"id": "1",
+		"titulo": "Nota Importante",
+		"parrafo": "Este es un párrafo que contiene información importante. Puedes escribir cualquier detalle relevante en esta nota."
+	},
+	{
+		"id": "2",
+		"titulo": "Lista de Tareas",
+		"parrafo": "Aquí puedes hacer una lista de tareas pendientes y marcarlas a medida que las completes."
+	},
+	{
+		"id": "3",
+		"titulo": "Recordatorio Diario",
+		"parrafo": "Este es un recordatorio diario para realizar una actividad específica. Asegúrate de no olvidarlo."
+	}
+]
