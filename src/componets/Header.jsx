@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import "./button.css";
+import "../style/burger.css";
 import React, { useState } from "react";
 import navegacion from "../data/navegacion.json";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
 	const [isMenuOpened, setIsMenuOpened] = useState(false);
 	const handleButtonClick = () => {
-		setIsMenuOpened((prev) => !prev);
+		setIsMenuOpened(!isMenuOpened);
 	};
 
 	const menuesUx = navegacion.map((menu) => {
@@ -37,9 +37,13 @@ const Header = () => {
 							/>
 						</svg>
 					</button>
-					<Navegacion style={{ display: isMenuOpened ? "block" : "none" }}>
-						<ul>{menuesUx}</ul>
-					</Navegacion>
+					{isMenuOpened === true ? (
+						<Navegacion>
+							<ul>{menuesUx}</ul>
+						</Navegacion>
+					) : (
+						<></>
+					)}
 				</div>
 				<Titulo>NotesJD</Titulo>
 			</Container>
@@ -54,6 +58,7 @@ const Container = styled.section`
 	position: relative;
 	max-height: 80px;
 	background-color: #5452b0;
+	z-index: 3;
 `;
 
 const Titulo = styled.h1`
@@ -89,7 +94,7 @@ const Lista = styled.li`
 	padding-left: 10px;
 	padding-right: 10px;
 	font-size: 1.2rem;
-	width:120px;
+	width: 120px;
 	line-height: 1.5;
 	transition: all 1s ease;
 
@@ -98,8 +103,6 @@ const Lista = styled.li`
 	}
 `;
 
-const StyledLink = styled(Link)`
-	
-`;
+const StyledLink = styled(Link)``;
 
 export default Header;
