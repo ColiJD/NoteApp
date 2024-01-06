@@ -1,19 +1,23 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
+import { StyledButton } from "../style/StyledForm";
 
-const Notas = ({ titulo, parrafo }) => {
+const Notas = ({ titulo, parrafo, id, eliminarNota }) => {
+
+	const handleEliminarNota = () => {
+    eliminarNota(id);
+  };
 	return (
 		<>
-
 			<StyledContainer>
 				<StyledTitulo>{titulo}</StyledTitulo>
 
 				<StyledParrafo>{parrafo}</StyledParrafo>
+				<StyledButton onClick={handleEliminarNota}><i className="gg-close-o"></i></StyledButton>
 			</StyledContainer>
 		</>
 	);
 };
-
 
 const StyledContainer = styled.details`
 	background-color: #96a1e3;

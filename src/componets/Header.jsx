@@ -51,12 +51,12 @@ const Header = () => {
 	);
 };
 
-const Container = styled.section`
+export const Container = styled.section`
 	padding: 2px;
 	display: flex;
 	align-items: center;
 	position: relative;
-	max-height: 80px;
+	height: 80px;
 	background-color: #5452b0;
 	z-index: 3;
 `;
@@ -87,13 +87,16 @@ const Navegacion = styled.nav`
 	padding-top: 0.75rem;
 	animation: ${fadeIn} 1s ease-in-out;
 	box-shadow: 2px 2px 2px 0px #5452b0;
+	width: 50%;
+	height: 100vh;
+	border-top: 2px solid #fff;
 `;
 
 const Lista = styled.li`
 	margin-bottom: 0.75rem;
 	padding-left: 10px;
 	padding-right: 10px;
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	width: 120px;
 	line-height: 1.5;
 	transition: all 1s ease;
